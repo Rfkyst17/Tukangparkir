@@ -47,10 +47,10 @@ GameObject:
   - component: {fileID: -9087824330833915456}
   - component: {fileID: 4435620622911587610}
   - component: {fileID: 1565379060419132187}
-  - component: {fileID: 6736843945950651024}
+  - component: {fileID: -2196229581300113929}
   m_Layer: 0
-  m_Name: mini simple demo_04
-  m_TagString: Untagged
+  m_Name: Maling
+  m_TagString: Thief
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -163,9 +163,9 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360020996318003118}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1923039037
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -177,7 +177,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6736843945950651024
+--- !u!114 &-2196229581300113929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,11 +186,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 360020996318003118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d69c66de833d3d342a081246fdb617ae, type: 3}
+  m_Script: {fileID: 11500000, guid: e5e29ad398c464649a1cad15afdbc7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parkingSlot: {fileID: 0}
-  motorPrefab: {fileID: 7769690492283750692, guid: f40e52a0c26735a46b681671fb2baa40,
+  targetMotor: {fileID: 1139660981453419426, guid: 3f83a5a9639ce0249ac0d7df9b8c40b9,
     type: 3}
 --- !u!1 &433692469389401108
 GameObject:

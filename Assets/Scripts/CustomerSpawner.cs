@@ -1,19 +1,21 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomerSpawner : MonoBehaviour
 {
     public GameObject customerPrefab;
-    public GameObject motorPrefab; // Tambahan: Prefab motor
+    public GameObject motorPrefab;
     public Transform spawnPoint;
+    public Transform exitPoint;
     public float spawnInterval = 5f;
-    public List<Transform> parkingSlots = new List<Transform>(); // Semua slot parkir
-    private List<Transform> availableSlots = new List<Transform>(); // Slot yang masih kosong
+    public List<Transform> parkingSlots = new List<Transform>();
+    public ThiefSpawner thiefSpawner; // ✅ Tambahkan reference ke ThiefSpawner
+    private List<Transform> availableSlots = new List<Transform>();
 
     void Start()
     {
-        availableSlots = new List<Transform>(parkingSlots); // Copy daftar slot awal
+        availableSlots = new List<Transform>(parkingSlots);
         StartCoroutine(SpawnCustomer());
     }
 
@@ -23,17 +25,18 @@ public class CustomerSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnInterval);
 
-            if (availableSlots.Count > 0) // Hanya spawn jika ada slot kosong
+            if (availableSlots.Count > 0)
             {
                 Transform selectedSlot = availableSlots[Random.Range(0, availableSlots.Count)];
-                availableSlots.Remove(selectedSlot); // Hapus dari daftar slot yang kosong
+                availableSlots.Remove(selectedSlot);
 
                 GameObject newCustomer = Instantiate(customerPrefab, spawnPoint.position, Quaternion.identity);
                 NPCCustomer npc = newCustomer.GetComponent<NPCCustomer>();
 
-                // Spawn motor bersamaan dengan NPC
                 GameObject motor = Instantiate(motorPrefab, spawnPoint.position, Quaternion.identity);
-                npc.AssignParkingSlot(selectedSlot, this, motor); // Kirim slot dan motor ke NPC
+
+                // ✅ Pastikan fungsi ini menggunakan parameter yang benar
+                npc.AssignParkingSlot(selectedSlot, this, motor, thiefSpawner);
             }
             else
             {
@@ -46,10 +49,12 @@ public class CustomerSpawner : MonoBehaviour
     {
         if (!availableSlots.Contains(slot))
         {
-            availableSlots.Add(slot); // Slot tersedia lagi setelah NPC pergi
+            availableSlots.Add(slot);
         }
     }
+
+    public Transform GetExitPoint()
+    {
+        return exitPoint;
+    }
 }
-
-
-

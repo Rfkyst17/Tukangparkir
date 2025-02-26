@@ -6,6 +6,9 @@ TagManager:
   tags:
   - CinemachineTarget
   - ParkingSlot
+  - Maling
+  - Motor
+  - Thief
   layers:
   - Default
   - TransparentFX

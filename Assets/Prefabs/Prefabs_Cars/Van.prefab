@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: -2306197324813891376}
   m_Layer: 0
   m_Name: Van
-  m_TagString: Untagged
+  m_TagString: Motor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
