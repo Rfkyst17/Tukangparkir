@@ -12,8 +12,10 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool attack;
+        public bool interact;
 
-		[Header("Movement Settings")]
+        [Header("Movement Settings")]
 		public bool analogMovement;
 
 		[Header("Mouse Cursor Settings")]
@@ -65,8 +67,20 @@ namespace StarterAssets
 		{
 			sprint = newSprintState;
 		}
-		
-		private void OnApplicationFocus(bool hasFocus)
+
+        public void OnAttack(InputValue value)
+        {
+            attack = value.isPressed;
+        }
+
+        public void OnInteract(InputValue value)
+        {
+            interact = value.isPressed;
+        }
+
+
+
+        private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
 		}

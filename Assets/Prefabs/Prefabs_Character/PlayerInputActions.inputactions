@@ -1,0 +1,34 @@
+{
+    "name": "PlayerInputActions",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "6c44a12b-5108-419f-b54b-f01a4aaf32ce",
+            "actions": [
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "8f858480-c870-466b-bfac-55bd4cf90261",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c9118ef7-acbc-4adf-ab76-dcbd73f81c90",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

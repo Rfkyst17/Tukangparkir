@@ -875,7 +875,7 @@ GameObject:
   - component: {fileID: -2315904426573991745}
   m_Layer: 0
   m_Name: NPCCustomer
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -944,7 +944,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1017,6 +1017,10 @@ MonoBehaviour:
     type: 3}
   motorPrefab: {fileID: 8663673574762740106, guid: 3f83a5a9639ce0249ac0d7df9b8c40b9,
     type: 3}
+  thiefSpawner: {fileID: 2016067613013107358, guid: 29e1a4dfa67e73f4cb3b44d55ef56a69,
+    type: 3}
+  hasPaid: 0
+  isRunningAway: 0
 --- !u!1 &5627010594929708217
 GameObject:
   m_ObjectHideFlags: 0

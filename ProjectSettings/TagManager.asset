@@ -9,6 +9,7 @@ TagManager:
   - Maling
   - Motor
   - Thief
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Character
   - Ground
-  - 
+  - thiefLayer
   - 
   - 
   - 

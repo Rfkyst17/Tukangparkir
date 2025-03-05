@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 598507913756302931}
   - component: {fileID: -5812706304525678947}
   - component: {fileID: 8035550233230658786}
+  - component: {fileID: 5733534938910395199}
   m_Layer: 0
   m_Name: Towtruck
   m_TagString: Motor
@@ -487,3 +488,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!195 &5733534938910395199
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924721617483827851}
+  m_Enabled: 1
+  m_AgentTypeID: 287145453
+  m_Radius: 2.128301
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 5.300032
+  m_BaseOffset: 2.650016
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
